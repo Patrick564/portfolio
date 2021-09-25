@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-    color: #fdd835;
+    color: #ef5350;
 }
 
 html body header {
@@ -86,7 +86,7 @@ html body nav ul li a {
 }
 
 .btn {
-    background-color: #95D404;
+    background-color: #e53935;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -96,7 +96,7 @@ html body nav ul li a {
 }
 
 .btn:hover {
-    background-color: #75A602;
+    background-color: #ef5350;
 }
 
 a.btn {
@@ -118,7 +118,7 @@ a.btn {
 }
 
 .orange {
-    color: #07DB09;
+    color: #e53935;
 }
 
 .orange:hover {
@@ -191,8 +191,8 @@ a.btn {
 
 .social {
     background-color: #fff;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 5px;
+    border-radius: 50px;
 }
 
 .made-width {
@@ -205,15 +205,23 @@ a.btn {
 }
 
 span {
-    border-radius: 10px;
-    background-color: #0097a7;
-    padding: 10px 10px;
+    border-radius: 50px;
+    background-color: #1e88e5;
+    padding: 15px 10px;
     color: #000000;
     font-weight: 700;
+}
+
+span:hover {
+    text-decoration: underline;
 }
 
 .technologies {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+h3 a {
+    text-decoration: underline;
 }

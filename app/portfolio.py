@@ -23,16 +23,16 @@ def mail():
     if request.method == 'POST':
         send_mail(name, email, message)
 
-        return render_template('portfolio/sent_email.html')
+        return render_template('portfolio/sent_mail.html')
 
     return render_template(url_for('portfolio.index'))
 
 
 def send_mail(name, email, message):
-    my_email = 'patrick@gmail.com'
+    my_email = current_app.config['MY_EMAIL']
     sg = sendgrid.SendGridAPIClient(api_key=current_app.config['SENDGRID_KEY'])
 
-    from_email = Email(my_email)
+    from_email = Email(current_app.config['SEND_EMAIL'])
     to_email = To(my_email, substitutions={
         "-name-": name,
         "-email-": email,
@@ -46,5 +46,6 @@ def send_mail(name, email, message):
         <p>Message: -message-</p>
     """
 
-    mail = Mail(my_email, to_email, 'New contact from website', html_content)
+    mail = Mail(from_email, to_email, 'New contact from website', html_content=html_content)
+
     response = sg.client.mail.send.post(request_body=mail.get())

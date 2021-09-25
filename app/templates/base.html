@@ -12,12 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='media-settings.css') }}">
     <title>{% block title %}{% endblock %} - Portfolio</title>
 </head>
 <body>
-    <header>
+    <header id="logo">
         <div class="logo">
-            <a href="#">Download resume</a>
+            <a href="https://github.com/Patrick564/static-files/raw/76cb54e240f0d82cf7f4fadda1639e146bd0c65e/patrick-vilchez.pdf">
+                Download resume
+            </a>
         </div>
         <nav>
             <ul>
@@ -39,26 +42,26 @@
     <div class="footer">
         <div class="center full-width">
             <div class="row">
-                <h3>Contact me</h3>
+                <h3><a href="#logo">You can download my resume :)</a></h3>
             </div>
         </div>
 
         <div class="center full-width">
             <div class="row">
-                <p>O también puedes seguirme en mis redes.</p>
+                <p>Contact me in my networks!</p>
             </div>
         </div>
 
         <div class="center full-width social-links">
-            <div class="row">
-                <a href="#">
-                    <img src="{{ url_for('static', filename='twitter.png') }}" alt="" class="social" width="30px">
+            <div class="links">
+                <a target="_blank" href="https://www.linkedin.com/in/patrick-vilchez/">
+                    <img src="{{ url_for('static', filename='linkedin.svg') }}" alt="" class="social" width="40px">
                 </a>
-                <a href="#">
-                    <img src="{{ url_for('static', filename='facebook.png') }}" alt="" class="social" width="30px">
+                <a target="_blank" href="#">
+                    <img src="{{ url_for('static', filename='telegram.svg') }}" alt="" class="social" width="40px">
                 </a>
-                <a href="#">
-                    <img src="{{ url_for('static', filename='linkedin.png') }}" alt="" class="social" width="30px">
+                <a target="_blank" href="https://github.com/Patrick564">
+                    <img src="{{ url_for('static', filename='github.svg') }}" alt="" class="social" width="40px">
                 </a>
             </div>
         </div>
